@@ -14,12 +14,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { provideNativeDateAdapter } from '@angular/material/core';
-
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-tasks',
   imports: [CommonModule, MatCardModule, MatCheckboxModule, FormsModule, ReactiveFormsModule, MatTableModule,
-    MatPaginatorModule, MatDatepickerModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatButtonModule],
+    MatPaginatorModule, MatDatepickerModule, MatSelectModule, MatInputModule, MatFormFieldModule, MatButtonModule, MatIconModule],
   providers: [provideNativeDateAdapter()],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss'
@@ -67,9 +67,9 @@ export class TasksComponent implements AfterViewInit {
   }
 
   onRowClick(row: Task) {
-    if(row != null){
-      this.editTask();
-    }
+    // if(row != null){
+    //   this.editTask();
+    // }
     // console.log(row);
   }
 
@@ -80,8 +80,11 @@ export class TasksComponent implements AfterViewInit {
 
     if (row.selected) {
       this.selectedRow = row;
+      this.editTask();
     } else {
       this.selectedRow = null;
+      this.isEdit = false;
+      this.cancel();
     }
   }
 
@@ -98,6 +101,15 @@ export class TasksComponent implements AfterViewInit {
     });
     console.log('Form after patchValue:', this.taskForm.value);
 
+  }
+
+  deleteTask(){
+    const task = this.selectedRow;
+    const isConfirmed = window.confirm('Are you sure you want to delete this task?');
+    if(isConfirmed && task.id){
+      this.taskService.deleteTask(task);
+      this.cancel();
+    }
   }
 
   onSubmit() {
@@ -126,10 +138,7 @@ export class TasksComponent implements AfterViewInit {
       };
 
       if (this.isEdit) {
-        // const index = this.tasks.findIndex(t => t.id === this.selectedRow[0].id);
-        // if (index !== -1) {
-        //   this.tasks[index] = task;
-        // }
+        this.taskService.updateTask(task);
       } else {
         this.taskService.addTask(task);
         this.taskForm.reset();

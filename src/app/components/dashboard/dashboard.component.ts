@@ -42,7 +42,7 @@ export class DashboardComponent implements AfterViewInit {
       align: 'center',
     },
     xaxis: {
-      categories: ['To Do', 'In development', 'Done'],
+      categories: ['To Do', 'In Development', 'Done'],
     },
     series: [
       {
@@ -178,7 +178,7 @@ export class DashboardComponent implements AfterViewInit {
       intersect: false,
       followCursor: true,
       custom: function () {
-        return '<div class="tooltip-custom" style="font-size:12px; height:20px; width:130px; text-align:center;background-color: rgba(243, 232, 232, 0.7);display: flex;align-items:center;  justify-content: center;">In development Tasks</div>';
+        return '<div class="tooltip-custom" style="font-size:12px; height:20px; width:130px; text-align:center;background-color: rgba(243, 232, 232, 0.7);display: flex;align-items:center;  justify-content: center;">In Development Tasks</div>';
       },
     },
   };
@@ -288,7 +288,7 @@ export class DashboardComponent implements AfterViewInit {
       }
     },
     colors: ["#0084ff", "#39539E", "#0077B5"],
-    labels: ["Done", "In development", "To Do"],
+    labels: ["Done", "In Development", "To Do"],
     legend: {
       show: true,
       floating: true,
@@ -332,7 +332,7 @@ export class DashboardComponent implements AfterViewInit {
   }
 
   prepareChartData() {
-    const categories = ['To Do', 'In development', 'Done'];
+    const categories = ['To Do', 'In Development', 'Done'];
     const personalTasks = [0, 0, 0];
     const workTasks = [0, 0, 0];
     let personalTasksRB = [];

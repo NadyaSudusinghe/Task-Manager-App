@@ -40,16 +40,18 @@ table {
     margin: 0px 20px;
 }
 
-.add-task-title {
-    font-size: 16px;
-    font-weight:bold;
-    margin-bottom: 30px;
-    align-items: center;
-}
+// .add-task-title {
+//     font-size: 16px;
+//     font-weight: bold;
+//     margin-bottom: 30px;
+//     align-items: center;
+// }
 
-.add-task-header {
-    align-items: center;
-}
+// .add-task-header {
+//     align-items: normal;
+//     justify-content: space-between;
+//     width: 325px;
+// }
 
 .button-group {
     display: flex;
@@ -65,3 +67,39 @@ mat-form-field {
     color: white;
     background-color: black;
 }
+
+.example-button-container {
+    // display: flex;
+    // justify-content: center;
+    // width: 140px;
+}
+
+mat-icon {
+    font-size: 25px !important;
+    height: 25px !important;
+    width: 25px !important;
+    margin: 0px !important;
+}
+
+.add-task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 315px;
+  }
+  
+  .add-task-title {
+    flex-grow: 1;
+    font-size: 19px;
+    font-weight: bold;
+  }
+  
+  .example-button-container {
+    // margin-left: 10px;
+  }
+  
+  button.mat-icon-button {
+    padding: 0;
+  }
+  

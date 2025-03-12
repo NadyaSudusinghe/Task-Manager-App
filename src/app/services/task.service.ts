@@ -9,12 +9,12 @@ import { Task } from '../models/task';
 export class TaskService {
 
   private tasksSubject = new BehaviorSubject<Task[]>([
-    { id: 1, name: 'Hydrogen', status: Status.done, deadline: new Date(), category: Category.personal },
-    { id: 2, name: 'Helium', status: Status.inDevelopment, deadline: new Date(), category: Category.work },
-    { id: 3, name: 'Lithium', status: Status.toDo, deadline: new Date(), category: Category.personal },
-    { id: 4, name: 'Beryllium', status: Status.done, deadline: new Date(), category: Category.personal },
-    { id: 5, name: 'Boron', status: Status.toDo, deadline: new Date(), category: Category.work },
-    { id: 6, name: 'Sodium', status: Status.inDevelopment, deadline: new Date(), category: Category.work },
+    { id: 1, name: 'Buying groceries', status: Status.done, deadline: new Date(), category: Category.personal },
+    { id: 2, name: 'Debugging angular project', status: Status.inDevelopment, deadline: new Date(), category: Category.work },
+    { id: 3, name: 'Cleaning kitchen', status: Status.toDo, deadline: new Date(), category: Category.personal },
+    { id: 4, name: 'Sorting groceries', status: Status.done, deadline: new Date(), category: Category.personal },
+    { id: 5, name: 'Adding update function', status: Status.toDo, deadline: new Date(), category: Category.work },
+    { id: 6, name: 'Deleting comments', status: Status.inDevelopment, deadline: new Date(), category: Category.work },
   ]);
 
   tasks$ = this.tasksSubject.asObservable();
@@ -36,6 +36,15 @@ export class TaskService {
     const index = tasks.findIndex(t => t.id === updatedTask.id);
     if (index !== -1) {
       tasks[index] = updatedTask;
+      this.tasksSubject.next(tasks);
+    }
+  }
+
+  deleteTask(task: Task): void {
+    const tasks = this.tasksSubject.getValue();
+    const index = tasks.findIndex(t => t.id === task.id);
+    if (index !== -1) {
+      tasks.splice(index, 1);
       this.tasksSubject.next(tasks);
     }
   }

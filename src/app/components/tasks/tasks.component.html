@@ -54,7 +54,15 @@
     
     <mat-card class="add-task-card" appearance="outlined">
         <mat-card-header class="add-task-header">
-            <mat-card-title class="add-task-title">{{isEdit ? 'Edit Task' : 'Add New Task'}}</mat-card-title>
+            <mat-card-title class="add-task-title">{{isEdit ? 'Edit Task' : 'Add New Task'}}
+                <!-- <mat-icon *ngIf="isEdit" class="delete-icon">delete</mat-icon> -->
+                
+            </mat-card-title>
+            <div *ngIf="isEdit" class="example-button-container">
+                <button mat-button aria-label="delete icon" (click)="deleteTask()">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
           </mat-card-header>
         <mat-card-content>
             <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
