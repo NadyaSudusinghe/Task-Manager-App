@@ -1,0 +1,12 @@
+<app-navbar (sidebarToggle)="toggleSidebar()"></app-navbar>
+
+<div class="app-container" [class.sidebar-visible]="isSidebarVisible" [class.sidebar-hidden]="!isSidebarVisible">
+  <app-sidebar></app-sidebar>
+  
+  <div class="content-area">
+    <!-- <app-dashboard></app-dashboard> -->
+    <!-- <app-tasks></app-tasks> -->
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

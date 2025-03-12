@@ -1,0 +1,67 @@
+.example-card {
+    max-width: 70%;
+}
+
+.add-task-card {
+    max-width: 30%;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.example-card,
+.add-task-card {
+    flex: 1;
+}
+
+.charts-card {
+    margin: 10px 0px;
+}
+
+.example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.example-margin {
+    margin: 0 20px;
+}
+
+table {
+    width: 100%;
+    // padding: 10px 20px;
+}
+
+.dashboard-tasks-table {
+    margin: 0px 20px;
+}
+
+.add-task-title {
+    font-size: 16px;
+    font-weight:bold;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.add-task-header {
+    align-items: center;
+}
+
+.button-group {
+    display: flex;
+    gap: 5px;
+
+}
+
+mat-form-field {
+    width: 300px;
+}
+
+.add-btn {
+    color: white;
+    background-color: black;
+}

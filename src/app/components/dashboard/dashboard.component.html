@@ -1,0 +1,98 @@
+<div class="radial-bar-row">
+    <mat-card class="radial-bar-charts-card" appearance="outlined">
+        <!-- <mat-card-header>
+            <mat-card-title>Task Status by Category</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content class="radial-bar-charts-content">
+            <!-- <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart"></apx-chart> -->
+            <apx-chart
+            #chart
+            [series]="chartOptions2.series"
+            [chart]="chartOptions2.chart"
+            [labels]="chartOptions2.labels"
+            [plotOptions]="chartOptions2.plotOptions"
+            [fill]="chartOptions2.fill"
+            [tooltip]="chartOptions2.tooltip">
+          </apx-chart> 
+          <!-- <div class="chart-title">Personal Tasks</div> -->
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="radial-bar-charts-card" appearance="outlined">
+        <!-- <mat-card-header>
+            <mat-card-title>Task Status by Category</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content class="radial-bar-charts-content">
+            <!-- <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart"></apx-chart> -->
+            <apx-chart
+            #chart
+            [series]="chartOptions3.series"
+            [chart]="chartOptions3.chart"
+            [labels]="chartOptions3.labels"
+            [plotOptions]="chartOptions3.plotOptions"
+            [fill]="chartOptions3.fill"
+            [tooltip]="chartOptions3.tooltip">
+          </apx-chart> 
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="radial-bar-charts-card" appearance="outlined">
+        <!-- <mat-card-header>
+            <mat-card-title>Task Status by Category</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content class="radial-bar-charts-content">
+            <!-- <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart"></apx-chart> -->
+            <apx-chart
+            #chart
+            [series]="chartOptions4.series"
+            [chart]="chartOptions4.chart"
+            [labels]="chartOptions4.labels"
+            [plotOptions]="chartOptions4.plotOptions"
+            [fill]="chartOptions4.fill"
+            [tooltip]="chartOptions4.tooltip">
+          </apx-chart> 
+        </mat-card-content>
+    </mat-card>
+    
+</div>
+<!-- <mat-card class="radial-bar-charts-card" appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>Task Status by Category</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <apx-chart
+        #chart
+        [series]="chartOptions2.series"
+        [chart]="chartOptions2.chart"
+        [labels]="chartOptions2.labels"
+        [plotOptions]="chartOptions2.plotOptions"
+        [fill]="chartOptions2.fill">
+      </apx-chart> 
+    </mat-card-content>
+</mat-card> -->
+<div class="row">
+    <mat-card class="charts-card" appearance="outlined">
+        <!-- <mat-card-header>
+            <mat-card-title>Task Status by Category</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content>
+            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [title]="chartOptions.title"
+                [xaxis]="chartOptions.xaxis"></apx-chart>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="full-radial-bar-charts-card" appearance="outlined">
+        <!-- <mat-card-header>
+            <mat-card-title>Task Status by Category</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content class="full-radial-bar-charts-content">
+            <!-- <apx-chart [series]="chartOptions2.series" [chart]="chartOptions2.chart"></apx-chart> -->
+            <apx-chart
+            #chart
+            [series]="chartOptions5.series"
+            [chart]="chartOptions5.chart"
+            [labels]="chartOptions5.labels"
+            [plotOptions]="chartOptions5.plotOptions"
+            [fill]="chartOptions5.fill"
+            [tooltip]="chartOptions5.tooltip">
+          </apx-chart> 
+        </mat-card-content>
+    </mat-card>
+</div>

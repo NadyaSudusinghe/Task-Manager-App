@@ -1,0 +1,59 @@
+.charts-card {
+    // margin: 10px 0px;
+}
+
+.charts-card {
+    width: 900px;
+    height: 380px;
+    // margin-top: 10px;
+}
+
+
+// ::ng-deep .apexcharts-canvas {
+//     width: -webkit-fill-available !important;
+
+//     svg {
+//         width: -webkit-fill-available;
+//     }
+// }
+
+.radial-bar-charts-card {
+    height: 200px;
+}
+
+.radial-bar-charts-content{
+    height: 200px;
+    padding: 0px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+
+.chart-title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.radial-bar-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.full-radial-bar-charts-card {
+    // margin: 10px 0px;
+}
+

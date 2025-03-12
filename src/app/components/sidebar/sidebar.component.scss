@@ -1,0 +1,21 @@
+.sidebar {
+    padding: 20px;
+    background-color: #2e3b4e;
+    color: white;
+  }
+  
+  mat-nav-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  mat-list-item {
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  mat-list-item:hover {
+    background-color: #1d2b3d;
+  }
+  
