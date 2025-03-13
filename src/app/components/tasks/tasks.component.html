@@ -73,6 +73,13 @@
                         Task is required
                     </mat-error> -->
                 </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <input matInput formControlName="description" />
+                    <!-- <mat-error *ngIf="taskForm.get('task')?.hasError('required') && taskForm.get('task')?.touched">
+                        Task is required
+                    </mat-error> -->
+                </mat-form-field>
     
                 <mat-form-field>
                     <mat-label>Category</mat-label>

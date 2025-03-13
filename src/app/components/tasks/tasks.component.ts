@@ -42,6 +42,7 @@ export class TasksComponent implements AfterViewInit {
   constructor(private fb: FormBuilder, private taskService: TaskService) {
     this.taskForm = this.fb.group({
       task: [''],
+      description: [''],
       category: [''],
       status: [''],
       deadline: [''],
@@ -95,6 +96,7 @@ export class TasksComponent implements AfterViewInit {
     this.isEdit = true;
     this.taskForm.patchValue({
       task: task.name,
+      description: task.description,
       category: Category[task.category as keyof typeof Category],
       status: task.status,
       deadline: task.deadline,
@@ -132,6 +134,7 @@ export class TasksComponent implements AfterViewInit {
       const task: Task = {
         id: this.isEdit ? this.selectedRow.id : this.tasks.length + 1,
         name: formValues.task,
+        description: formValues.description,
         status: formValues.status,
         deadline: formValues.deadline,
         category: Category[formValues.category as keyof typeof Category],
