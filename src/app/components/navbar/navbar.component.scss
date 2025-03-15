@@ -1,5 +1,5 @@
 mat-toolbar {
-    background-color:rgb(42, 40, 40);
+    background-color: rgb(42, 40, 40);
     color: white;
 }
 
@@ -11,4 +11,16 @@ mat-icon {
 button {
     background-color: rgb(42, 40, 40);
     border: none;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.menu-item-btn {
+    background: none;
+}
+
+.menu-icon-btn {
+    background: none;
 }
