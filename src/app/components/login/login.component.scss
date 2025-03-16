@@ -14,24 +14,24 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0eaea;
+    background-color: #f4f4f4;
   }
 
   .form-container {
     width: 600px;
     margin: 0 auto;
     padding: 50px;
-    background-color: #333;
+    background-color: #181C14;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    color: #fff;
+    color: #f4f4f4;
   }
 
   h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 36px;
-    color: #fff;
+    color: #f4f4f4;
   }
 
   form {
@@ -50,14 +50,14 @@
     border-radius: 5px;
     margin-bottom: 20px;
     font-size: 16px;
-    color: #fff;
-    background-color: #555;
+    color: black;
+    background-color: #f4f4f4;
   }
 
   button {
     padding: 10px;
-    background-color: #fff;
-    color: black;
+    background-color: #697565;
+    color: #f4f4f4;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -66,7 +66,7 @@
   }
 
   button:hover {
-    background-color: #c5aadb;
+    background-color: #3C3D37;
   }
 
   a {
@@ -77,7 +77,7 @@
   }
 
   a:hover {
-    color: #c5aadb;
+    color: #3C3D37;
   }
 
   p {

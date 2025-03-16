@@ -1,7 +1,7 @@
 .sidebar {
     padding: 20px;
-    background-color: #2e3b4e;
-    color: white;
+    background-color: #3C3D37;
+    color: #f4f4f4;
   }
   
   mat-nav-list {
@@ -10,12 +10,18 @@
   }
   
   mat-list-item {
-    color: white;
+    color: #f4f4f4;
     padding: 12px;
     font-size: 16px;
   }
   
   mat-list-item:hover {
     background-color: #1d2b3d;
+    color: #f4f4f4;
+  }
+
+  ::ng-deep .side-bar-item > .mdc-list-item__content > .mdc-list-item__primary-text, 
+  .side-bar-item > .mdc-list-item__content > .mdc-list-item__primary-text:hover {
+    color: #f4f4f4;
   }
   
